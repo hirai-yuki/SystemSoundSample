@@ -17,8 +17,10 @@
 		C2B38978165C9305007C9901 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B38977165C9305007C9901 /* Default@2x.png */; };
 		C2B3897A165C9305007C9901 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B38979165C9305007C9901 /* Default-568h@2x.png */; };
 		C2B3897D165C9305007C9901 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2B3897B165C9305007C9901 /* MainStoryboard.storyboard */; };
-		C2B38980165C9305007C9901 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B3897F165C9305007C9901 /* MasterViewController.m */; };
-		C2B38983165C9305007C9901 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B38982165C9305007C9901 /* DetailViewController.m */; };
+		C2B38991165C98D7007C9901 /* SoundTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B3898E165C98D7007C9901 /* SoundTableViewCell.m */; };
+		C2B38992165C98D7007C9901 /* SoundInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B38990165C98D7007C9901 /* SoundInfo.m */; };
+		C2B38995165C98E7007C9901 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B38994165C98E7007C9901 /* ViewController.m */; };
+		C2B38997165C9929007C9901 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B38996165C9929007C9901 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,10 +38,13 @@
 		C2B38977165C9305007C9901 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		C2B38979165C9305007C9901 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C2B3897C165C9305007C9901 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		C2B3897E165C9305007C9901 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		C2B3897F165C9305007C9901 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		C2B38981165C9305007C9901 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		C2B38982165C9305007C9901 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		C2B3898D165C98D7007C9901 /* SoundTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundTableViewCell.h; sourceTree = "<group>"; };
+		C2B3898E165C98D7007C9901 /* SoundTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundTableViewCell.m; sourceTree = "<group>"; };
+		C2B3898F165C98D7007C9901 /* SoundInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundInfo.h; sourceTree = "<group>"; };
+		C2B38990165C98D7007C9901 /* SoundInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundInfo.m; sourceTree = "<group>"; };
+		C2B38993165C98E7007C9901 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C2B38994165C98E7007C9901 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C2B38996165C9929007C9901 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +55,7 @@
 				C2B38964165C9305007C9901 /* UIKit.framework in Frameworks */,
 				C2B38966165C9305007C9901 /* Foundation.framework in Frameworks */,
 				C2B38968165C9305007C9901 /* CoreGraphics.framework in Frameworks */,
+				C2B38997165C9929007C9901 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +85,7 @@
 				C2B38963165C9305007C9901 /* UIKit.framework */,
 				C2B38965165C9305007C9901 /* Foundation.framework */,
 				C2B38967165C9305007C9901 /* CoreGraphics.framework */,
+				C2B38996165C9929007C9901 /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -89,10 +96,12 @@
 				C2B38972165C9305007C9901 /* AppDelegate.h */,
 				C2B38973165C9305007C9901 /* AppDelegate.m */,
 				C2B3897B165C9305007C9901 /* MainStoryboard.storyboard */,
-				C2B3897E165C9305007C9901 /* MasterViewController.h */,
-				C2B3897F165C9305007C9901 /* MasterViewController.m */,
-				C2B38981165C9305007C9901 /* DetailViewController.h */,
-				C2B38982165C9305007C9901 /* DetailViewController.m */,
+				C2B38993165C98E7007C9901 /* ViewController.h */,
+				C2B38994165C98E7007C9901 /* ViewController.m */,
+				C2B3898D165C98D7007C9901 /* SoundTableViewCell.h */,
+				C2B3898E165C98D7007C9901 /* SoundTableViewCell.m */,
+				C2B3898F165C98D7007C9901 /* SoundInfo.h */,
+				C2B38990165C98D7007C9901 /* SoundInfo.m */,
 				C2B3896A165C9305007C9901 /* Supporting Files */,
 			);
 			path = SystemSoundSample;
@@ -180,8 +189,9 @@
 			files = (
 				C2B38970165C9305007C9901 /* main.m in Sources */,
 				C2B38974165C9305007C9901 /* AppDelegate.m in Sources */,
-				C2B38980165C9305007C9901 /* MasterViewController.m in Sources */,
-				C2B38983165C9305007C9901 /* DetailViewController.m in Sources */,
+				C2B38991165C98D7007C9901 /* SoundTableViewCell.m in Sources */,
+				C2B38992165C98D7007C9901 /* SoundInfo.m in Sources */,
+				C2B38995165C98E7007C9901 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
